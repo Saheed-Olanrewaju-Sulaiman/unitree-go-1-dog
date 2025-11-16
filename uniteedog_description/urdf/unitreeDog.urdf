@@ -11,8 +11,8 @@
       </material>
     </visual>
   </link>
-
-    <link name="hip">
+<!-- back hip right -->
+  <link name="back_hip_right">
     <visual>
       <origin xyz="0 0 0" rpy="0 3.1416 0"/>
       <geometry>
@@ -24,13 +24,78 @@
     </visual>
   </link>
 
-  <joint name="base_to_hip" type="continuous">
+  <joint name="base_to_back_hip_right" type="revolute">
     <axis xyz="1 0 0"/>
     <parent link="base_link"/>
-    <child link="hip"/>
-    <origin xyz="-0.19 0 0" rpy="0 0 0"/>
-     <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/>
+    <child link="back_hip_right"/>
+    <origin xyz="-0.19 -0.05 0" rpy="0 0 0"/>
+     <limit lower="-0.6" upper="0.6" effort="10" velocity="0.5"/>
   </joint>
+
+  <!-- back hip left -->
+  <link name="back_hip_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 3.1416 0"/>
+      <geometry>
+        <mesh filename="package://uniteedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+      <material name="base_color">
+        <color rgba="0.59 0.29 0.0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_back_hip_left" type="revolute">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="back_hip_left"/>
+    <origin xyz="-0.19 0.05 0" rpy="0 0 0"/>
+     <limit lower="-0.6" upper="0.6" effort="10" velocity="0.5"/>
+  </joint>
+
+  <!-- front hip right -->
+  <link name="front_hip_right">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://uniteedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+      <material name="base_color">
+        <color rgba="0.59 0.29 0.0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_front_hip_right" type="revolute">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="front_hip_right"/>
+    <origin xyz="0.19 -0.05 0" rpy="0 0 0"/>
+     <limit lower="-0.6" upper="0.6" effort="10" velocity="0.5"/>
+  </joint>
+
+
+  <!-- front hip left -->
+  <link name="front_hip_left">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://uniteedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+      <material name="base_color">
+        <color rgba="0.59 0.29 0.0 1.0"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_front_hip_left" type="revolute">
+    <axis xyz="1 0 0"/>
+    <parent link="base_link"/>
+    <child link="front_hip_left"/>
+    <origin xyz="0.19 0.05 0" rpy="0 0 0"/>
+     <limit lower="-0.6" upper="0.6" effort="10" velocity="0.5"/>
+  </joint>
+
 
 
 <!-- depth Camera -->
@@ -48,14 +113,12 @@
   </link>
 
   <joint name="base_to_camera" type="fixed">
-    
     <parent link="base_link"/>
     <child link="camera"/>
     <origin xyz="0.3 0 0" rpy="0 0 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
   </joint>
 
-  <!-- ultraSound -->
+<!-- ultraSound -->
 
   <link name="ultraSound">
     <visual>
@@ -70,11 +133,9 @@
   </link>
 
   <joint name="base_to_ultraSound" type="fixed">
-    
     <parent link="camera"/>
     <child link="ultraSound"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
   </joint>
 
   <!--  _______________________________  -->
@@ -96,18 +157,17 @@
     </visual>
   </link>
 
-  <joint name="base_to_right_front_leg" type="fixed">
-    
-    <parent link="base_link"/>
+  <joint name="base_to_right_front_leg" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.52" upper="1.57" effort="10" velocity="0.5"/>
+    <parent link="front_hip_right"/>
     <child link="right_front_leg"/>
-    <origin xyz="0.18 -0.1 0 " rpy="0 0 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
+    <origin xyz="0 -0.08 0 " rpy="0 0 0"/>
   </joint>
 
 <!-- calf front right -->
 
   <link name="front_calf_right">
-
     <visual>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
@@ -119,18 +179,18 @@
     </visual>
   </link>
 
-  <joint name="right_front_leg_to_calf" type="fixed">
-    
+  <joint name="right_front_leg_to_calf" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0" effort="10" velocity="0.5"/>
     <parent link="right_front_leg"/>
     <child link="front_calf_right"/>
     <origin xyz=" -0.14 0 -0.15 " rpy="0 -0.7854 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
   </joint>  
 
 
 
 
-    <!-- front left leg -->
+<!-- front left leg -->
 
   <link name="left_front_leg">
     <visual>
@@ -143,13 +203,12 @@
       </material>
     </visual>
   </link>
-
-  <joint name="base_to_left_front_leg" type="fixed">
-    
-    <parent link="base_link"/>
+ <joint name="base_to_left_front_leg" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.52" upper="1.57" effort="10" velocity="0.5"/>
+    <parent link="front_hip_left"/>
     <child link="left_front_leg"/>
-    <origin xyz="0.18 0.1 0 " rpy="0 0 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
+    <origin xyz="0 0.08 0 " rpy="0 0 0"/>
   </joint>
 
 <!-- calf front left -->
@@ -167,12 +226,12 @@
     </visual>
   </link>
 
-  <joint name="left_front_leg_to_calf" type="fixed">
-    
+  <joint name="left_front_leg_to_calf" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0" effort="10" velocity="0.5"/>
     <parent link="left_front_leg"/>
     <child link="front_calf_left"/>
     <origin xyz=" -0.14 0 -0.15 " rpy="0 -0.7854 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
   </joint>  
 
 
@@ -192,12 +251,13 @@
     </visual>
   </link>
 
-  <joint name="hip_to_right_back_leg" type="fixed">
-    
-    <parent link="hip"/>
+  <joint name="hip_to_right_back_leg" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.52" upper="1.57" effort="10" velocity="0.5"/>  
+    <parent link="back_hip_right"/>
     <child link="right_back_leg"/>
     <origin xyz="0 -0.08 0 " rpy="0 0 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
+       <!-- <origin xyz="0 -0.06 0 " rpy="0 0 0"/> -->
   </joint>
 
 
@@ -216,12 +276,12 @@
     </visual>
   </link>
 
-  <joint name="right_back_leg_to_calf" type="fixed">
-    
+  <joint name="right_back_leg_to_calf" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0" effort="10" velocity="0.5"/>
     <parent link="right_back_leg"/>
     <child link="back_calf_right"/>
     <origin xyz=" -0.14 0 -0.15 " rpy="0 -0.7854 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
   </joint>  
 
 
@@ -241,12 +301,12 @@
     </visual>
   </link>
 
-  <joint name="hip_to_left_back_leg" type="fixed">
-    
-    <parent link="hip"/>
+  <joint name="hip_to_left_back_leg" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.52" upper="1.57" effort="10" velocity="0.5"/>
+    <parent link="back_hip_left"/>
     <child link="left_back_leg"/>
     <origin xyz="0 0.08 0 " rpy="0 0 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
   </joint>
 
   <!-- calf back left -->
@@ -264,12 +324,12 @@
     </visual>
   </link>
 
-  <joint name ="left_back_leg_to_calf" type="fixed">
-    
+  <joint name ="left_back_leg_to_calf" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0" effort="10" velocity="0.5"/>
     <parent link="left_back_leg"/>
     <child link="back_calf_left"/>
     <origin xyz=" -0.14 0 -0.15 " rpy="0 -0.7854 0"/>
-     <!-- <limit lower="0.0" upper="0.3" effort="10" velocity="0.5"/> -->
   </joint>  
 
 
