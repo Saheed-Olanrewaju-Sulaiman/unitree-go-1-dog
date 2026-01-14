@@ -1,8 +1,6 @@
-`---
-
 # 🏗️ Unitree go1 Dog
 
-Aurora Robotics - Sayande Project
+**Aurora Robotics** - **Sayande Project**
 
 - **Lead Contributor:** [Agwaze Great Osayande](https://github.com/GreatOsa), [Saheeed Olanrewaju Sulaiman](https://github.com/Saheed-Olanrewaju-Sulaiman)
 
