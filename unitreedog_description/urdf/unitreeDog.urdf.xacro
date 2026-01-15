@@ -6,7 +6,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/trunk.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/trunk.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -39,7 +39,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 3.1416 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -78,7 +78,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 3.1416 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -117,7 +117,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -156,7 +156,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/hip.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -195,7 +195,7 @@
     <visual>
       <origin xyz="0 -0.01 0.01" rpy="0.7854 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/depthCamera.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/depthCamera.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.9 0.29 0.0 1"/>
@@ -255,7 +255,7 @@
     <visual>
       <origin xyz="0 0 0.02" rpy="-0.7854 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/ultraSound.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/ultraSound.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.9 0.29 0.0 1"/>
@@ -292,7 +292,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0.7854 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/thigh_mirror.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/thigh_mirror.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -331,7 +331,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -373,7 +373,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0.7854 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -409,7 +409,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -448,7 +448,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0.7854 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/thigh_mirror.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/thigh_mirror.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -484,7 +484,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -523,7 +523,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0.7854 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>
@@ -559,7 +559,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://uniteedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://unitreedog_description/meshes/calf.dae" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="base_color">
         <color rgba="0.59 0.29 0.0 1.0"/>

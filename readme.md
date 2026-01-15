@@ -93,7 +93,7 @@ This project is intended as a simulation foundation, not a complete robotics sys
 
 ## 🛠️ Tools & Technologies
 
-- **Primary Software: Gazebo Classic 11, ROS (Noetic)**
+- **Primary Software: Gazebo Classic 11, ROS (Humble)**
 
 - **Languages / Formats: URDF (XML), Bash**
 
@@ -129,7 +129,7 @@ Add short comments only where necessary. -->
 
 - Ubuntu 20.04 or 22.04
 - Gazebo Classic 11 installed
-- ROS Noetic (with ros_control and gazebo_ros packages)
+- ROS Humble (with ros_control and gazebo_ros packages)
 - Python 3 (for launch and helper scripts)
 
 ### Basic Usage
