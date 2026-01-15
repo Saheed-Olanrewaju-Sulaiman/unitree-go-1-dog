@@ -1,6 +1,6 @@
 <launch>
-    <let name="urdf_path" value="$(find-pkg-share uniteedog_description)/urdf/unitreeDog.urdf.xacro"/>
-    <let name="rviz_config_path" value="$(find-pkg-share uniteedog_description)/rviz/urdf_config.rviz" />
+    <let name="urdf_path" value="$(find-pkg-share unitreedog_description)/urdf/unitreeDog.urdf.xacro"/>
+    <let name="rviz_config_path" value="$(find-pkg-share unitreedog_description)/rviz/urdf_config.rviz" />
     <node pkg="robot_state_publisher" exec="robot_state_publisher">
         <param name="robot_description"
             value="$(command 'xacro $(var urdf_path)')" />
